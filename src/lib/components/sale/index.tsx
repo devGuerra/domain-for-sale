@@ -53,7 +53,7 @@ export default function Sale({ absoluteUrl }: Props) {
           >
             Domain for sale <br />
             <Text as="span" color="green.400">
-              {process.env.NEXT_PUBLIC_URL}
+              {absoluteUrl}
             </Text>
           </Heading>
           <Text color="gray.500">
