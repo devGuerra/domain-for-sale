@@ -9,7 +9,6 @@ import {
   useColorModeValue,
   createIcon,
 } from "@chakra-ui/react";
-import Head from "next/head";
 import Link from "next/link";
 
 const Arrow = createIcon({
@@ -31,83 +30,74 @@ interface Props {
 
 export default function Sale({ absoluteUrl }: Props) {
   return (
-    <>
-      <Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
-
-      <Container maxW="3xl">
-        <Stack
-          as={Box}
-          textAlign="center"
-          spacing={{ base: 8, md: 14 }}
-          py={{ base: 20, md: 36 }}
+    <Container maxW="3xl">
+      <Stack
+        as={Box}
+        textAlign="center"
+        spacing={{ base: 8, md: 14 }}
+        py={{ base: 20, md: 36 }}
+      >
+        <Heading
+          fontWeight={600}
+          fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
+          lineHeight="110%"
         >
-          <Heading
-            fontWeight={600}
-            fontSize={{ base: "2xl", sm: "4xl", md: "6xl" }}
-            lineHeight="110%"
-          >
-            Domain for sale <br />
-            <Text as="span" color="green.400">
-              {absoluteUrl}
-            </Text>
-          </Heading>
-          <Text color="gray.500">
-            {`o domínio ${absoluteUrl} está a venda, se você tem
+          Domain for sale <br />
+          <Text as="span" color="green.400">
+            {absoluteUrl}
+          </Text>
+        </Heading>
+        <Text color="gray.500">
+          {`o domínio ${absoluteUrl} está a venda, se você tem
             interesse em adquirir este domínio, entre em contato conosco.`}
-          </Text>
-          <Text color="gray.500">
-            Entre em contato e realize sua oferta agora mesmo, clique no botão
-            abaixo.
-          </Text>
-          <Stack
-            direction="column"
-            spacing={3}
-            align="center"
-            alignSelf="center"
-            position="relative"
-          >
-            <Link href="mailto:contato@robertoguerra.dev">
-              <Button
-                colorScheme="green"
-                bg="green.400"
-                rounded="full"
-                px={6}
-                _hover={{
-                  bg: "green.500",
-                }}
-              >
-                Entre em contato
-              </Button>
-            </Link>
+        </Text>
+        <Text color="gray.500">
+          Entre em contato e realize sua oferta agora mesmo, clique no botão
+          abaixo.
+        </Text>
+        <Stack
+          direction="column"
+          spacing={3}
+          align="center"
+          alignSelf="center"
+          position="relative"
+        >
+          <Link href="https://wa.me/5511941113433">
+            <Button
+              colorScheme="green"
+              bg="green.400"
+              rounded="full"
+              px={6}
+              _hover={{
+                bg: "green.500",
+              }}
+            >
+              Entre em contato
+            </Button>
+          </Link>
 
-            <Box>
-              <Icon
-                as={Arrow}
-                color={useColorModeValue("gray.800", "gray.300")}
-                w={71}
-                position="absolute"
-                right={-71}
-                top="10px"
-              />
-              <Text
-                fontSize="lg"
-                fontFamily="Caveat"
-                position="absolute"
-                right="-125px"
-                top="-15px"
-                transform="rotate(10deg)"
-              >
-                Clique aqui
-              </Text>
-            </Box>
-          </Stack>
+          <Box>
+            <Icon
+              as={Arrow}
+              color={useColorModeValue("gray.800", "gray.300")}
+              w={71}
+              position="absolute"
+              right={-71}
+              top="10px"
+            />
+            <Text
+              fontSize="lg"
+              fontFamily="Caveat"
+              position="absolute"
+              right="-125px"
+              top="-15px"
+              transform="rotate(10deg)"
+            >
+              Clique aqui
+            </Text>
+          </Box>
         </Stack>
-      </Container>
-    </>
+      </Stack>
+    </Container>
   );
 }
