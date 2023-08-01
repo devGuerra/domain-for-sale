@@ -25,7 +25,11 @@ const Arrow = createIcon({
   ),
 });
 
-export default function Sale() {
+interface Props {
+  absoluteUrl: string;
+}
+
+export default function Sale({ absoluteUrl }: Props) {
   return (
     <>
       <Head>
@@ -52,6 +56,10 @@ export default function Sale() {
               {process.env.NEXT_PUBLIC_URL}
             </Text>
           </Heading>
+          <Text color="gray.500">
+            {`o domínio ${absoluteUrl} está a venda, se você tem
+            interesse em adquirir este domínio, entre em contato conosco.`}
+          </Text>
           <Text color="gray.500">
             Entre em contato e realize sua oferta agora mesmo, clique no botão
             abaixo.
