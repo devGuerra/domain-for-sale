@@ -1,6 +1,7 @@
-import { NextPageContext } from "next";
 import { Flex } from "@chakra-ui/react";
+import { NextPageContext } from "next";
 import { NextSeo } from "next-seo";
+
 import Sale from "lib/components/sale";
 
 interface Props {
