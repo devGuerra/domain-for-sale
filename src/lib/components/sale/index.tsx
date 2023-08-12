@@ -62,7 +62,7 @@ export default function Sale({ absoluteUrl }: Props) {
           alignSelf="center"
           position="relative"
         >
-          <Link href="https://wa.me/5511941113433">
+          <Link href="mailto:contato@mobird.com.br">
             <Button
               colorScheme="green"
               bg="green.400"
